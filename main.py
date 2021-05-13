@@ -17,6 +17,6 @@ async def post_mthd(headers: Optional[str] = Header("bearer 123")):
     return Response(headers=headers)
 
 
-@app.post("/post-json/item", tags=["public"])
+@app.post("/post-json/item", tags=["public"], response_model=Item)
 async def send_json(item: Item):
     return item
