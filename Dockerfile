@@ -1,10 +1,6 @@
-FROM python:3.9
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
 
 RUN mkdir -p /usr/src/intencive
-
 WORKDIR /usr/src/intencive
-
 COPY . /usr/src/intencive
 RUN pip install --no-cache-dir -r requirements.txt
-
-CMD uvicorn api:app --reload --port ${PORT} --host 0.0.0.0
