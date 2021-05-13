@@ -2,4 +2,4 @@
 # start.py
 import os
 
-os.system("uvicorn main:app --port 80")
+os.system("uvicorn main:app --reload --port 8001 --host 0.0.0.0")
