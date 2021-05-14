@@ -7,4 +7,4 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python3", "start.py"]
+CMD uvicorn main:app --reload --port 8001 --host 0.0.0.0
