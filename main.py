@@ -5,7 +5,7 @@ from typing import Optional
 app = FastAPI()
 
 
-@app.get("/get-sum", tags=["public"], response_model=Num)
+@app.get("/get-sum", tags=["public"])
 async def get_num(first_num: int, second_num: int):
     resp_str = f"Сумма чисел {first_num + second_num}"
     return resp_str
